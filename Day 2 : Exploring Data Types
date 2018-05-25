@@ -1,0 +1,56 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        if(isInteger(s))
+        System.out.println("This input is of type Integer.");
+        else if(isFloat(s))
+        System.out.println("This input is of type Float.");
+        else if(isString(s))
+        System.out.println("This input is of type string.");
+        else
+        System.out.println("This is something else.");
+
+   }
+
+
+public static boolean isInteger(String s)
+{
+    try
+    {
+     int i = Integer.parseInt(s); 
+     return true;
+    }
+    catch( Exception e)
+    {
+        return false;
+    }
+}
+
+public static boolean isFloat(String s)
+{
+    try
+    {
+     float i = Float.parseFloat(s);
+     return true;
+    }
+    catch( Exception e)
+    {
+        return false;
+    }
+}
+
+public static boolean isString(String s)
+{
+     if(s instanceof String)
+     return true;
+     return false;
+}
+}
