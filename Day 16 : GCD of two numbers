@@ -1,0 +1,28 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int gcd=gcd(num1,num2);
+        System.out.println(gcd);
+   }
+   
+   public static int gcd(int a, int b)
+    {
+        if (a == 0 || b == 0)
+           return 0;
+        if (a == b)
+            return a;
+        if (a > b)
+            return gcd(a-b, b);
+        return gcd(a, b-a);
+    }
+     
+}
