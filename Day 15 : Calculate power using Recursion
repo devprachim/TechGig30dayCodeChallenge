@@ -1,0 +1,22 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int power = sc.nextInt();
+        int product = power(num,power);
+        System.out.println(product);
+   }
+   
+   public static int power(int x, int y) {
+		if (y == 0)
+			return 1;
+		return x * power(x, --y);
+	}
+}
