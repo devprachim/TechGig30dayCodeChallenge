@@ -31,6 +31,6 @@ public class CandidateCode {
     	    c_odd++;
     	    }
     	}
-    	System.out.println((even/c_even)+(odd/c_odd));
+    	System.out.println((Math.round(even*1.0/c_even))+(Math.round(odd*1.0/c_odd)));
    }
 }
