@@ -1,0 +1,38 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+
+    	Scanner sc = new Scanner(System.in);
+    	int n1 = sc.nextInt();
+    	int n2 = sc.nextInt();
+    	int x=n1,y=n2;
+    	int sum1 =0;
+    	int sum2 =0;
+    	while(n1!=0)
+    	{
+    	    int a= n1%10;
+    	    sum1 = sum1+a;
+    	    n1=n1/10;
+    	}
+    	
+    		while(n2!=0)
+    	{
+    	    int a= n2%10;
+    	    sum2 = sum2+a;
+    	    n2=n2/10;
+    	}
+    	
+    	if(sum1 > sum2)
+    	System.out.println(x);
+    	if(sum1 < sum2)
+    	System.out.println(y);
+    	if(sum1 == sum2)
+    	System.out.println("Equal");
+   }
+}
