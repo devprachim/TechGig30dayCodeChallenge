@@ -1,0 +1,33 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+
+    	Scanner sc = new Scanner(System.in);
+    	int n = sc.nextInt();
+    	int [] arr = new int[n];
+    	int even =0,odd=0;
+    	for(int i =0;i<n;i++)
+    	{
+    	    arr[i]=sc.nextInt();
+    	}
+    	for(int i =0;i<n;i++)
+    	{
+    	    if(i%2==0)
+    	    even=even+arr[i];
+    	    else
+    	    odd=odd+arr[i]; 
+    	}
+    	if(even>odd)
+    	System.out.println(even-odd);
+    	if(even==odd)
+    	System.out.println("0");
+    	if(even<odd)
+    	System.out.println(odd-even);
+   }
+}
