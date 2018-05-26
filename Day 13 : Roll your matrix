@@ -1,0 +1,32 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+        
+        Scanner sc = new Scanner(System.in);
+        int limit1 = sc.nextInt();
+        int limit2 = sc.nextInt();
+        int [][] arr1 = new int[limit1][limit2];
+        for(int i =0; i<limit1;i++)
+        {
+          for(int j =0; j<limit2;j++)
+        {
+            arr1[i][j]=sc.nextInt();
+        }  
+        }
+        
+        for(int i =0; i<limit1;i++)
+        {
+          for(int j =0; j<limit2;j++)
+        {
+         System.out.print(arr1[j][i]+" ");
+        }  
+        System.out.println();
+        }
+   }
+}
