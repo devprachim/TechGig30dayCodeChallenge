@@ -1,0 +1,26 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+        
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int upper=0;
+        int lower=0;
+        for(int i=0;i<s.length();i++)
+        {
+            if(Character.isLowerCase(s.charAt(i)))
+            lower++;
+            else
+            if(Character.isUpperCase(s.charAt(i)))
+            upper++;
+        }
+        System.out.println(upper);
+        System.out.println(lower);
+   }
+}
