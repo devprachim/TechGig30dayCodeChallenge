@@ -1,0 +1,37 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+
+    	Scanner sc = new Scanner(System.in);
+    	int n1 = sc.nextInt();
+    	int n2 = sc.nextInt();
+    	int [][] arr = new int[n1][n2];
+    	int diagonal1=0, diagonal2=0;
+    	for(int i=0;i<n1;i++)
+    	{
+    	    for(int j=0;j<n2;j++)
+    	{
+    	    arr[i][j] = sc.nextInt();
+    	}
+    	}
+    	for(int i=0;i<n1;i++)
+    	{
+    	   diagonal1=diagonal1+arr[i][i];
+    	   diagonal2=diagonal2+arr[n1-i-1][n1-i-1];
+    	}
+    	
+    	if(diagonal1==diagonal2)
+    	System.out.println("Equal");
+    	if(diagonal1<diagonal2)
+    	System.out.println("Diagonal 2");
+    	if(diagonal1>diagonal2)
+    	System.out.println("Diagonal 1");
+    	
+   }
+}
