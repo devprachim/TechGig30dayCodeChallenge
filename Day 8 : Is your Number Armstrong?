@@ -1,0 +1,27 @@
+/* 
+ * Enter your code here. Read input from STDIN. Print your output to STDOUT. 
+ * Your class should be named CandidateCode.
+*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+         Scanner sc = new Scanner (System.in);
+         int num = sc.nextInt();
+         int x= num;
+         int a=0;
+         int sum =0;
+         while(x!=0)
+         {
+            a= x%10;
+            sum = sum+(a*a*a);
+            x=x/10;
+         }
+         
+         if(sum == num)
+         System.out.println("True");
+         else
+         System.out.println("False");
+   }
+}
